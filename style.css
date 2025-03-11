@@ -17,7 +17,7 @@
     }
 
     a:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     .container {
@@ -40,6 +40,7 @@
       font-size: 1.25rem;
       font-weight: 600;
       color: #212529;
+      padding-left: 1rem;
     }
 
     .nav {
@@ -74,19 +75,21 @@
       cursor: pointer;
     }
 
+    /* Button styles */
     .btn-outline-primary {
       color: #000000;
       background-color: transparent;
       border-color: #000000;
+      transition: background-image 1s ease-in-out, color 15ms ease-in-out;
     }
-
+    
     .btn-outline-primary:hover {
-      color: #fff;
-      background-color: #000;
-      border-color: #000000;
+      color: #ffffff;
+      background-image: linear-gradient(to left top, #051937, #003b66, #006d84, #00997a, #0fd94f);
       text-decoration: none;
+      border-color: #e2dcdc;
     }
-
+    
     .btn-primary {
       color: #fff;
       background-color: #007bff;
