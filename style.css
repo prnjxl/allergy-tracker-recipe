@@ -5,6 +5,16 @@
       box-sizing: border-box;
     }
 
+    /*Custom Font Loading*/
+    @font-face {
+      font-family: 'Comicstyle'; /* Define the font family name */
+      src: url('fonts/Best Friends Font.ttf') format('truetype'); /* Use other formats if needed */
+    }
+
+    /* Now you can use the font family name in your CSS */
+    
+
+  
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       line-height: 1.5;
@@ -22,7 +32,6 @@
 
     .container {
       width: 100%;
-      max-width: 1140px;
       padding: 0 15px;
       margin: 0 auto;
     }
@@ -30,16 +39,16 @@
     /* Header styles */
     .header {
       display: flex;
+      width: 100vw;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 0;
-      border-bottom: 1px solid #e9ecef;
+      padding: 1rem ;
+      border-bottom: 1px solid #0707078c;
     }
 
-    .company-name {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: #212529;
+    .company-name img {
+      height: 1.89rem;
+      width: 8rem;
       padding-left: 1rem;
     }
 
@@ -87,19 +96,7 @@
       color: #ffffff;
       background-image: linear-gradient(to left top, #051937, #003b66, #006d84, #00997a, #0fd94f);
       text-decoration: none;
-      border-color: #e2dcdc;
-    }
-    
-    .btn-primary {
-      color: #fff;
-      background-color: #007bff;
-      border-color: #007bff;
-    }
-
-    .btn-primary:hover {
-      background-color: #0069d9;
-      border-color: #0062cc;
-      text-decoration: none;
+      border-color: #ffffff;
     }
 
     .btn-secondary {
@@ -115,111 +112,115 @@
     }
 
     /* Main content styles */
-    .main {
-      padding: 3rem 0;
+    
+    /* Image Section */
+    .intro-img {
+      width: 600px; /* Adjust as needed */
+      height: auto;
+      border-radius: 10px;
     }
 
-    .pricing-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .pricing-title {
-      font-size: 2.5rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-    }
-
-    .pricing-description {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #6c757d;
-    }
-
-    /* Pricing cards */
-    .pricing-cards {
+    /* Container Styling */
+    .intro {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      flex: 1;
-      min-width: 18rem;
-      max-width: 22rem;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid rgba(0, 0, 0, 0.125);
-      border-radius: 0.25rem;
-      overflow: hidden;
-    }
-
-    .card-header {
-      padding: 0.75rem 1.25rem;
-      background-color: rgba(0, 0, 0, 0.03);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-      text-align: center;
-    }
-
-    .card-title {
-      font-size: 1.25rem;
-      font-weight: 500;
-    }
-
-    .card-body {
-      padding: 1.25rem;
-      flex: 1 1 auto;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .price {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .price-value {
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-
-    .price-period {
-      font-size: 0.875rem;
-      color: #6c757d;
-    }
-
-    .feature-list {
-      list-style: none;
-      margin-bottom: 1.5rem;
-    }
-
-    .feature-item {
-      padding: 0.5rem 0;
-      display: flex;
+      justify-content: space-between;
       align-items: center;
+      width: 95%;
+      margin: 50px auto;
     }
 
-    .feature-icon {
-      margin-right: 0.5rem;
-      color: #28a745;
+    /* Text Section */
+    .intro .container {
+      flex: 1;
+      padding-right: 20px;
     }
 
-    .card-footer {
-      padding: 1.25rem;
-      margin-top: auto;
+    .intro-title {
+      font-size: 2.5rem;
+      font-weight: bold;
     }
 
-    .btn-block {
-      display: block;
-      width: 100%;
+    .intro-text {
+      font-size: 3vh;
+      text-align: justify;
+      max-width: 500px;
+    }
+
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .intro {
+          flex-direction: column;
+          text-align: center;
+      }
+
+      .intro .container {
+          padding-right: 0;
+          padding-bottom: 20px;
+      }
+
+      .intro-img {
+          width: 100%;
+          max-width: 400px;
+      }
+    }
+    /* About Section */
+    .about {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      width: 95%;
+      margin: 50px auto;
+    }
+
+    /* Image Section */
+    .about img {
+      width: 600px; /* Adjust as needed */
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Text Section */
+    .about-content {
+      flex: 1;
+      padding-left: 80px;
+    }
+
+    .intro-title2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .about-text {
+      font-size: 3vh;
+      text-align: justify;
+      max-width: 500px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .about {
+          flex-direction: column-reverse;
+          text-align: center;
+      }
+
+      .about-content {
+          padding-left: 0;
+          padding-bottom: 20px;
+      }
+
+      .about img {
+          width: 100%;
+          max-width: 400px;
+      }
     }
 
     /* Footer styles */
     .footer {
       padding: 3rem 0;
-      border-top: 1px solid #e9ecef;
+      border-top: 1px solid #0707078c;
     }
 
     .footer-content {
@@ -271,15 +272,6 @@
 
     .footer-link a:hover {
       color: #212529;
-    }
-
-    /* Mobile menu */
-    .mobile-menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
     }
 
     /* Responsive styles */

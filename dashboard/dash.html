@@ -1,0 +1,75 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashstyle.css" />
+  </head>
+  <body>
+  <!-- Contains Navigation -->
+  <header class="header container">
+    <a href="dash.html" class="company-name"><img src="../img/logo.png" alt="Pure Plates"></a>
+    
+    <nav class="nav" id="mainNav">
+      <a href="profile.html" class="btn btn-outline-primary">Hi, Pranjal !</a>
+    </nav>
+  </header>
+
+  <!-- Contains Form Access Button -->
+  <div class="form-btn">
+    <button class="cta-btn" id="open">+</button>
+  </div>
+
+  <!-- Contains Hidden Form -->
+    <section class="modal-container" id="modal">
+      <section class="modal">
+        <button class="close-btn" id="close">x</button>
+        <div class="modal-content">
+          <h1>Set Your Allergies</h1>
+          <form class="modal-form">
+            <div>
+              <label for="name">Food Item</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Add food item"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <label for="date">Select Date</label>
+              <input
+                type="date"
+                id="date"
+                class="form-input"
+              />
+              
+            </div>
+            <div>
+              <label for="options">Select your Severity level</label>
+                <select id="options" class="form-input">
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="option1">Mild</option>
+                  <option value="option2">Moderate</option>
+                  <option value="option3">Severe</option>
+                </select>
+            </div>
+            <div>
+              <label for="gender">Select Gender</label>
+                <select id="gender" class="form-input">
+                  <option value="" disabled selected>Choose your gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="submit-wrapper">
+              <input type="submit" value="Submit" class="submit-btn" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </section>
+    <script src="formapp.js"></script>
+  </body>
+</html>
